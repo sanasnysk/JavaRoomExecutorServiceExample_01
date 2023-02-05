@@ -27,8 +27,8 @@ public class MainActivity extends AppCompatActivity {
 
     private UserDatabase db;
 
-    private ExecutorService executorService = Executors.newSingleThreadExecutor();
-    private Handler handler = HandlerCompat.createAsync(Looper.getMainLooper());
+    private final ExecutorService executorService = Executors.newSingleThreadExecutor();
+    private final Handler handler = HandlerCompat.createAsync(Looper.getMainLooper());
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
         number = findViewById(R.id.et_Number);
         listView = findViewById(R.id.listview_data);
         checkBox = findViewById(R.id.updateCheckBox);
-
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
