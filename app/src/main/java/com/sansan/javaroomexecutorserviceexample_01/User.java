@@ -23,6 +23,10 @@ public class User {
         this.number = number;
     }
 
+    public User() {
+
+    }
+
     public int getId() {
         return id;
     }
